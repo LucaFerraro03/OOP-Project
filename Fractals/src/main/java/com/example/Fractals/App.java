@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class App extends Application {
     public static void main(String[] args) {
         launch(args);
@@ -13,7 +15,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Fractals.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Fractals.fxml")));
         Scene scene = new Scene(root);
         stage.setTitle("2D Fractals");
         stage.setScene(scene);
