@@ -1,2 +1,2 @@
 # OOP-Project
-OOP Project about Fractals with basic animations and rgb variations
+OOP University Project about Fractals with basic animations and rgb color variations

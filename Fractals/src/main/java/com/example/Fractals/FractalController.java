@@ -4,7 +4,6 @@ import javafx.animation.*;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Point2D;
@@ -13,11 +12,9 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
 
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Stop;
 import javafx.stage.Screen;
 import javafx.util.Duration;
 
-import java.util.*;
 import java.util.random.RandomGenerator;
 
 public class FractalController {
@@ -89,7 +86,7 @@ public class FractalController {
 
     }
 
-    public void onItemPicked(ActionEvent event) {
+    public void onComboItemPicked(ActionEvent event) {
 
         String choice = cmbChoice.getValue();
 

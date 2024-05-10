@@ -39,7 +39,7 @@
             </VBox>
             <VBox prefHeight="100.0" prefWidth="164.0">
                <children>
-                  <ComboBox fx:id="cmbChoice" onAction="#onItemPicked" prefWidth="150.0" promptText="Fractals">
+                  <ComboBox fx:id="cmbChoice" onAction="#onComboItemPicked" prefWidth="150.0" promptText="Fractals">
                      <VBox.margin>
                         <Insets top="40.0" />
                      </VBox.margin>
