@@ -51,6 +51,8 @@ public class FractalController {
 
     private GraphicsContext gc;
 
+    Timeline timeline;
+
     int red, blue, green;
 
     public void initialize() {
@@ -93,7 +95,7 @@ public class FractalController {
         if (choice.equals("Tree Fractals")) {
             spLeftBranch.setDisable(false);
             spRightBranch.setDisable(false);
-            btDraw.setDisable(false);
+           // btDraw.setDisable(false);
 
             chkPickColor.setDisable(false);
             chkRndColor.setDisable(false);
@@ -101,7 +103,7 @@ public class FractalController {
             cmbChoice.setDisable(true);
         }
         else if (choice.equals("Snowflake")) {
-            btDraw.setDisable(false);
+            //btDraw.setDisable(false);
 
             chkPickColor.setDisable(false);
             chkRndColor.setDisable(false);
@@ -116,21 +118,24 @@ public class FractalController {
         blue = RandomGenerator.getDefault().nextInt(255);
         green = RandomGenerator.getDefault().nextInt(255);
 
+        btDraw.setDisable(false);
         chkPickColor.setDisable(true);
     }
 
 
     public void onPickColorPicked(ActionEvent event) {
 
+        btDraw.setDisable(false);
         colorPicker.setDisable(false);
         chkRndColor.setDisable(true);
     }
 
 
     public void onClearClicked(ActionEvent event) {
-        gc.setFill(Color.BLACK);
+
         gc.fillRect(0, 0, myCanvas.getWidth(), myCanvas.getHeight());
         initialize();
+
     }
 
 
@@ -197,7 +202,7 @@ public class FractalController {
         int animationDuration = (int) (spDuration.getValue() * 1000);
 
         // Crea una timeline per animare la crescita della linea
-        Timeline timeline = new Timeline(
+        timeline = new Timeline(
                 new KeyFrame(Duration.ZERO, new KeyValue(lengthProperty, 0)),
                 new KeyFrame(Duration.millis(animationDuration), new KeyValue(lengthProperty, end.distance(start)))
         );
