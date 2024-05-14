@@ -111,31 +111,6 @@ public class FractalController {
 
     }
 
-
-//    public void onTreeFractalPicked(ActionEvent event) {
-//        spLeftBranch.setDisable(false);
-//        spRightBranch.setDisable(false);
-//        btDraw.setDisable(false);
-//
-//        chkPickColor.setDisable(false);
-//        chkRndColor.setDisable(false);
-//
-//        radioSnowflake.setDisable(true);
-//    }
-//
-//    public void onSnowflakePicked(ActionEvent event) {
-//        spLeftBranch.setDisable(false);
-//        spRightBranch.setDisable(false);
-//
-//        btDraw.setDisable(false);
-//
-//        chkPickColor.setDisable(false);
-//        chkRndColor.setDisable(false);
-//
-//        radioTreeFractal.setDisable(true);
-//    }
-
-
     public void onRandomColorPicked(ActionEvent event) {
         red = RandomGenerator.getDefault().nextInt(255);
         blue = RandomGenerator.getDefault().nextInt(255);
